@@ -9,3 +9,5 @@ typing-extensions
 pydantic-settings
 httpx
 python-multipart
+pydantic
+email-validator
