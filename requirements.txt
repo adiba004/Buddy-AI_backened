@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+python-dotenv
+supabase
+openai
+sentence-transformers
+langgraph
+typing-extensions
+pydantic-settings
+httpx
+python-multipart
