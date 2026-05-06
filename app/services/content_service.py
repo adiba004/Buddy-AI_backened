@@ -4,11 +4,11 @@ from app.core.database import supabase
 
 def get_standards() -> List[str]:
     res = supabase.table("subjects").select("grade").execute()
-    return sorted(set(x["grade"] for x in res.data))
+    return sorted(set(str(x["grade"]) for x in res.data))
 
 
 def get_subjects(grade: str) -> List[dict]:
-    return supabase.table("subjects").select("id,name").eq("grade", grade).execute().data
+    return supabase.table("subjects").select("id,name").eq("grade", int(grade)).execute().data
 
 
 def get_chapters(subject_id: str) -> List[dict]:
